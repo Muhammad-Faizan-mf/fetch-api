@@ -11,8 +11,8 @@ export default async function Home() {
       <div className="flex flex-col">
       {
         response.map((res:any, key:number)=>(
-          <div>
-         <Link href={`${res.id}`} key={res.id}> 
+          <div key={res.id}>
+         <Link href={`${res.id}`} > 
         <div className="border m-2 p-1 rounded-lg font-serif">{`${key+1}. ${res.title}`}
         </div>
         </Link>
