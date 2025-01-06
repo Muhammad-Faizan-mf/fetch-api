@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default async function Posts(params:type) {
+export default async function Posts(params:any) {
     console.log(params.params.id)
     const url = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.params.id}`);
     let response = await url.json();
