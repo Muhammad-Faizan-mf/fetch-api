@@ -10,9 +10,9 @@ export default async function Home() {
       <div className="p-5 text-center text-3xl font-bold font-serif">Here are the posts!</div>
       <div className="flex flex-col">
       {
-        response.map((res, key)=>(
+        response.map((res:any, key:number)=>(
           <div>
-         <Link href={`${res.id}`}> 
+         <Link href={`${res.id}`} key={res.id}> 
         <div className="border m-2 p-1 rounded-lg font-serif">{`${key+1}. ${res.title}`}
         </div>
         </Link>
